@@ -1,12 +1,13 @@
 {
   "expo": {
-    "name": "appListaCompras",
-    "slug": "appListaCompras",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
-    "ios": {
+  "name": "Lista de compras",
+  "slug": "lista-de-compras",
+  "version": "1.0.0",
+  "orientation": "portrait",
+  "icon": "./assets/icon.png",
+  "splash": { "backgroundColor": "#0E1005" },
+  "userInterfaceStyle": "light",
+  "ios": {
       "supportsTablet": true
     },
     "android": {
@@ -22,3 +23,8 @@
     }
   }
 }
+
+
+
+
+
