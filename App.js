@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, FlatList, TextInput, Modal, Button} from 'react-native';
 import { useState } from 'react';
+import { cores } from './src/constants/tema';
 import Navbar from './src/components/navbar/Navbar';
 import ListaVazia from './src/components/addItem/ListaVazia';
 
@@ -28,7 +29,8 @@ const [itens, setItens] = useState([]);
         data={itens}
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => (
-          <Text>{item.nome}- {item.quantidade}x - R$ {item.preco}</Text>
+          <View style={styles.itemLista}> 
+          <Text>{item.nome}</Text><View> PESO </View> <View> X </View>     </View>
         )}
         ListEmptyComponent={<ListaVazia />}
       />
@@ -48,6 +50,7 @@ const [itens, setItens] = useState([]);
         <Modal
           visible={showModal}
           animationType="slide"
+          style={styles.modal}
         >
           {console.log(showModal)}
           <View>
@@ -94,8 +97,10 @@ const [itens, setItens] = useState([]);
 }
 
 const styles = StyleSheet.create({
+
   container: {
-    height: '80%',
+    height: '100%',
+    width: '100%',
     backgroundColor: '#6d74ec',
   },
 
@@ -111,6 +116,20 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 20,
   },
+
+  itemLista: {
+    height: 74,
+    width: 100,
+    backgroundColor: '#ffff',
+    padding: 15
+
+  },
+
+  modal: {
+      backgroundColor: cores.superficie,
+      height: 50,
+      width: "100%"
+  }
 });
 
 
