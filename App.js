@@ -113,6 +113,7 @@ const diminuir = () => {
 
 
                              {/*mdal antimacaco,*/}
+
       { showModal && (
 
         <View
@@ -126,17 +127,22 @@ const diminuir = () => {
             {/* quantidade de itens */}
 
               <View  style={styles.containerQuantidade}>
-                    <Pressable onPress={diminuir}>
+
+               
+                        <Pressable onPress={diminuir}>
                       <Text style={styles.plusMin}>
                         -
                       </Text>
                       </Pressable>
-
-                            <Text style={styles.plusMin}> 
+                          
+                            <Pressable>
+                              
+                        <Text style={styles.plusMin}>
+                              
                                 {quantidade}
-                            </Text>
-
-
+                        
+                        </Text>
+                            </Pressable>
                         <Pressable onPress={aumentar}>
 
                       <Text style={styles.plusMin}>
@@ -144,6 +150,7 @@ const diminuir = () => {
                       </Text>
 
                     </Pressable>
+                     
 
               </View>
 
@@ -190,7 +197,7 @@ const styles = StyleSheet.create({
     flexDirection: 'collum',
     justifyContent: 'space-between',
     fontSize: 20,
-    width: '80%',
+    width: '90%',
     borderWidth: 5,
     borderColor: cores.borda,
     borderRadius: 5,
@@ -211,6 +218,8 @@ const styles = StyleSheet.create({
     margin: 10
   
   },
+  
+ 
 
   itemLista: {
 
@@ -225,10 +234,12 @@ const styles = StyleSheet.create({
 
 
   conteinerModal: {
-
-      backgroundColor: cores.superficie2,
+    
+      flexDirection: 'row',
+      alignItems: 'center',
       height: 50,
-      width: 80,
+      width: '100%',
+      margin: 'auto',
       justifyContent: 'space-between'
 
   },
@@ -236,15 +247,14 @@ const styles = StyleSheet.create({
 
   plusButton: {
 
-
         color: cores.texto2,
         height: 50,
         width: 50,
-        backgroundColor: cores.superficie2,
         borderRadius: 10,
         justifyContent: 'center',
         alignItems: 'center',
-        marginRight: 10
+        marginRight: 10,
+        backgroundColor: 'transparet'
 
 
   },
@@ -254,7 +264,6 @@ const styles = StyleSheet.create({
       flexDirection: 'row',
       width: '100%',
       justifyContent: 'space-between',
-
 
 
   },
@@ -277,7 +286,6 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: 'center',
     color: cores.texto2,
-    margin: 2
 
 
   }
